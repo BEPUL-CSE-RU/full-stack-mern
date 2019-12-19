@@ -4,7 +4,7 @@ const cors = require('cors')
 const app = express()
 const logger = require('morgan')
 
-const apiPort = 9697
+const apiPort = process.env.PORT | 9697;
 const db = require('./db/dbindex.js');
 
 const movieRouter = require('./routes/movie-router.js')
