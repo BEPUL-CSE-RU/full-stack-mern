@@ -1,0 +1,25 @@
+{
+  "name": "movie_creator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "cd server && node app.js",
+    "server": "cd server && nodemon app.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BEPUL-CSE-RU/Full-stack-MERN-2-medium.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BEPUL-CSE-RU/Full-stack-MERN-2-medium/issues"
+  },
+  "homepage": "https://github.com/BEPUL-CSE-RU/Full-stack-MERN-2-medium#readme"
+}
